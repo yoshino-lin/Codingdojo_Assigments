@@ -14,13 +14,13 @@
           background-color: blue;
           height: 40px;
           width:  40px;
-          display: inline-inline-block;
+          display: inline-block;
         }
         .sushi{
           background-color: black;
           height: 40px;
           width:  40px;
-          display: inline-inline-block;
+          display: inline-block;
           background-image: url('img/sushi.png');
           background-size: contain;
         }
@@ -28,13 +28,13 @@
           background-color: black;
           height: 40px;
           width:  40px;
-          display: inline-inline-block;
+          display: inline-block;
         }
         #ninjaman{
           background-color: black;
           height: 40px;
           width:  40px;
-          display: inline-inline-block;
+          display: inline-block;
           background-image: url('img/ninja.gif');
           background-size: contain;
           position: absolute;
@@ -44,28 +44,27 @@
     </style>
 </head>
 <body>
-    <div id = 'world'>
+    <div id = 'world'></div>
     <div id = 'ninjaman'></div>
 </body>
 <script type="text/javascript">
     var world = [
-      [1,1,1,1,1,1],
-      [1,1,2,0,1,1],
-      [1,1,2,1,1,1],
-      [1,1,2,1,1,1],
-      [1,1,1,1,1,1],
+      [1,1,1,1,1],
+      [1,1,2,0,1],
+      [1,1,2,0,1],
+      [1,1,2,1,1],
     ];
     var worldDict = {
       0: 'blank',
       1: 'wall',
-      2: 'sushi',
+      2: 'sushi'
     }
     function drawWorld(){
         output = "";
-        for(var row = 0; riw < world.lenght; row++){
+        for(var row = 0; row < world.length; row++){
             output += "<div class = 'row'>"
             for(var x = 0; x < world[row].length; x++){
-                output += "div class = '" + worldDict[world[row][x]] + "'></div>"
+                output += "<div class = '" + worldDict[world[row][x]] + "'></div>"
             }
             output += "</div>"
         }
