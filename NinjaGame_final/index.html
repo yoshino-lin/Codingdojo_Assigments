@@ -1,40 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <div id='background'>
-		<!--位于img文件夹里的down1.png等文件是角色的图片（向下）-->
-        <div id='character' style='position:absolute; top:100px; left:450px; background-image: url("img/down1.png"); width:59px; height:86px;'></div>
-        </div>
-        <script type="text/javascript">
-            var leftValue = 450, topValue = 100, direction = 'down', step = 1;
-            function update(){
-			if(step == 1){step = 2;} //如果是图片是方向1图片，便改成方向2的图片
-			else{step = 1;}//方向2的图片改回方向1
-                document.getElementById("character").style.left = leftValue+"px";
-                document.getElementById("character").style.top = topValue+"px";
-				document.getElementById("character").style.backgroundImage = "url('img/"+direction+step+".png')";
+<head>
+    <title>NinjaMan</title>
+    <style type = "text/css">
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        .row{
+          line-height: 0;
+        }
+        .wall{
+          background-color: blue;
+          height: 40px;
+          width:  40px;
+          display: inline-inline-block;
+        }
+        .sushi{
+          background-color: black;
+          height: 40px;
+          width:  40px;
+          display: inline-inline-block;
+          background-image: url('img/sushi.png');
+          background-size: contain;
+        }
+        .blank{
+          background-color: black;
+          height: 40px;
+          width:  40px;
+          display: inline-inline-block;
+        }
+        #ninjaman{
+          background-color: black;
+          height: 40px;
+          width:  40px;
+          display: inline-inline-block;
+          background-image: url('img/ninja.gif');
+          background-size: contain;
+          position: absolute;
+          left: 40px;
+          top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'world'>
+    <div id = 'ninjaman'></div>
+</body>
+<script type="text/javascript">
+    var world = [
+      [1,1,1,1,1,1],
+      [1,1,2,0,1,1],
+      [1,1,2,1,1,1],
+      [1,1,2,1,1,1],
+      [1,1,1,1,1,1],
+    ];
+    var worldDict = {
+      0: 'blank',
+      1: 'wall',
+      2: 'sushi',
+    }
+    function drawWorld(){
+        output = "";
+        for(var row = 0; riw < world.lenght; row++){
+            output += "<div class = 'row'>"
+            for(var x = 0; x < world[row].length; x++){
+                output += "div class = '" + worldDict[world[row][x]] + "'></div>"
             }
-            document.onkeydown = function(e) {
-                console.log('e: ', e); //测试信息1
-                console.log('e.keyCode: ', e.keyCode);//测试信息2：e.keyCode的值
-                if (e.keyCode == 65 && leftValue > 0) { // LEFT
-                    leftValue = leftValue - 10;
-					direction = 'left';
-                }
-                else if (e.keyCode == 68 && leftValue < 500) { // RIGHT
-                    leftValue = leftValue + 10;
-					direction = 'right';		
-                }
-                else if (e.keyCode == 87 && topValue > 0) { // UP
-                    topValue = topValue - 10;
-					direction = 'top';
-                }
-				else if (e.keyCode == 83 && topValue < 500) { // DOWN
-                    topValue = topValue + 10;
-					direction = 'down';
-                }
-                update();
-            }
-        </script>
-    </body>
+            output += "</div>"
+        }
+        document.getElementById('world').innerHTML = output;
+    }
+    drawWorld()
+</script>
 </html>
