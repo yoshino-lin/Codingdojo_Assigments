@@ -46,6 +46,7 @@
 <body>
     <div id = 'world'></div>
     <div id = 'ninjaman'></div>
+
 </body>
 <script type="text/javascript">
     var world = [
@@ -70,6 +71,33 @@
         }
         document.getElementById('world').innerHTML = output;
     }
-    drawWorld()
+    drawWorld();
+
+    var ninjaman = {
+      x:1,
+      y:1
+    }
+
+    function drawNinjaman(){
+      document.getElementById('ninjaman').style.top = ninjaman.y * 40 + 'px'
+      document.getElementById('ninjaman').style.left = ninjaman.x * 40 + 'px'
+    }
+    drawNinjaman()
+
+    document.onkeydown = function(e) {
+      if(e.keyCode == 37){
+          ninjaman.x--;
+      }
+      if(e.keyCode == 39){
+          ninjaman.x++;
+      }
+      if(e.keyCode == 40){
+          ninjaman.y++;
+      }
+      if(e.keyCode == 38){
+          ninjaman.y--;
+      }
+      drawNinjaman()
+    }
 </script>
 </html>
