@@ -1,0 +1,12 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+#wrapper{
+width:200px;
+height:200px;
+border:2px solid darkslategray;
+border-radius:30px;
+line-height: 200px;
+}
