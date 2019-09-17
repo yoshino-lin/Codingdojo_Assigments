@@ -63,19 +63,21 @@
     <div id = 'world'></div>
     <div id = 'ninjaman'></div>
     <p>points:<span id="points">0</span></p>
+    <p>life:<span id="NinjaMan_life">3</span></p>
+    <!--<p><span id="game_over"></span></p>-->
 </body>
 <script type="text/javascript">
     var world = [
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
+      [1,1,1,1,1,1,1,1,1,1,1],
+      [1],
+      [1],
+      [1],
+      [1],
+      [1],
+      [1],
+      [1],
+      [1],
+      [1,1,1,1,1,1,1,1,1,1,1],
     ];
     var worldDict = {
       0: 'blank',
@@ -84,11 +86,12 @@
       3: 'onigiri',
       4: 'scaredy'
     };
-    for(var i = 0; i<world.length; i++){
-        for(var x = 0; x<10; x++){
+    for(var i = 1; i<world.length-1; i++){
+        for(var x = 0; x<9; x++){
             var random = parseInt(0 + (4) * (Math.random()))
             world[i].push(random);
         }
+        world[i].push(1);
     }
     var ghost_x = parseInt(0 + (world.length) * (Math.random()));
     var ghost_y = parseInt(0 + (world.length) * (Math.random()));
@@ -138,8 +141,8 @@
               ninjaman.y--;
           }
       }
-      var NinjaMan_life = 3;
       //ghost
+      var NinjaMan_life = 3;
       if(NinjaMan_life != 0){
           var ghost_move_dic = parseInt(0 + (2) * (Math.random()));
           var temp_ghost_x = ghost_x;
@@ -167,12 +170,16 @@
          world[ghost_y][ghost_x] = 4;
       }
       if(world[ninjaman.y][ninjaman.x] == 4){
-          NinjaMan_life--;
+          document.getElementById('NinjaMan_life').innerHTML --;
       }
       else if (world[ninjaman.y][ninjaman.x] == 2 ||world[ninjaman.y][ninjaman.x] == 3) {
         document.getElementById('points').innerHTML ++;
         world[ninjaman.y][ninjaman.x] = 0;
 
+      }
+      if (document.getElementById('NinjaMan_life').innerHTML <= 0) {
+            NinjaMan_life = 3;
+            document.getElementById('NinjaMan_life').innerHTML = NinjaMan_life;
       }
       drawWorld();
       drawNinjaman()
