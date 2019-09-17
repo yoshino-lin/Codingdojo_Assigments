@@ -24,6 +24,22 @@
           background-image: url('img/sushi.png');
           background-size: contain;
         }
+        .onigiri{
+          background-color: black;
+          height: 40px;
+          width:  40px;
+          display: inline-block;
+          background-image: url('img/onigiri.png');
+          background-size: contain;
+        }
+        .scaredy{
+          background-color: black;
+          height: 40px;
+          width:  40px;
+          display: inline-block;
+          background-image: url('img/scaredy.png');
+          background-size: contain;
+        }
         .blank{
           background-color: black;
           height: 40px;
@@ -46,20 +62,37 @@
 <body>
     <div id = 'world'></div>
     <div id = 'ninjaman'></div>
-
+    <p>points:<span id="points">0</span></p>
 </body>
 <script type="text/javascript">
     var world = [
-      [1,1,1,1,1],
-      [1,1,2,0,1],
-      [1,1,2,0,1],
-      [1,1,2,1,1],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
     ];
     var worldDict = {
       0: 'blank',
       1: 'wall',
-      2: 'sushi'
+      2: 'sushi',
+      3: 'onigiri',
+      4: 'scaredy'
+    };
+    for(var i = 0; i<world.length; i++){
+        for(var x = 0; x<10; x++){
+            var random = parseInt(0 + (4) * (Math.random()))
+            world[i].push(random);
+        }
     }
+    var ghost_x = parseInt(0 + (world.length) * (Math.random()));
+    var ghost_y = parseInt(0 + (world.length) * (Math.random()));
+    world[ghost_y][ghost_x] = 4;
     function drawWorld(){
         output = "";
         for(var row = 0; row < world.length; row++){
@@ -86,17 +119,62 @@
 
     document.onkeydown = function(e) {
       if(e.keyCode == 37){
-          ninjaman.x--;
+          if(world[ninjaman.y][ninjaman.x-1] !=1){
+              ninjaman.x--;
+          }
       }
       if(e.keyCode == 39){
-          ninjaman.x++;
+          if(world[ninjaman.y][ninjaman.x+1] !=1){
+              ninjaman.x++;
+          }
       }
       if(e.keyCode == 40){
-          ninjaman.y++;
+          if(world[ninjaman.y+1][ninjaman.x] !=1){
+              ninjaman.y++;
+          }
       }
       if(e.keyCode == 38){
-          ninjaman.y--;
+          if(world[ninjaman.y-1][ninjaman.x] !=1){
+              ninjaman.y--;
+          }
       }
+      var NinjaMan_life = 3;
+      //ghost
+      if(NinjaMan_life != 0){
+          var ghost_move_dic = parseInt(0 + (2) * (Math.random()));
+          var temp_ghost_x = ghost_x;
+          var temp_ghost_y = ghost_y;
+
+          if(ghost_move_dic == 0) {
+              if(ninjaman.x > ghost_x){
+                  ghost_x+=1;
+              }
+              else{
+                  ghost_x-=1;
+              }
+
+          }
+          else {
+              if(ninjaman.y > ghost_y){
+                  ghost_y+=1;
+              }
+              else{
+                  ghost_y-=1;
+              }
+          }
+         var temp_block = world[ghost_y][ghost_x];
+         world[temp_ghost_y][temp_ghost_x] = temp_block;
+         world[ghost_y][ghost_x] = 4;
+      }
+      if(world[ninjaman.y][ninjaman.x] == 4){
+          NinjaMan_life--;
+      }
+      else if (world[ninjaman.y][ninjaman.x] == 2 ||world[ninjaman.y][ninjaman.x] == 3) {
+        document.getElementById('points').innerHTML ++;
+        world[ninjaman.y][ninjaman.x] = 0;
+
+      }
+      drawWorld();
       drawNinjaman()
     }
 </script>
