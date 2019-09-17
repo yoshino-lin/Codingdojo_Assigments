@@ -1,5 +1,54 @@
-p{
-	
-	
-	
+.red_box{
+	margin: 10px;
+	height: 150px;
+  	width: 300px;
+	background: red;
+	display: inline-block;
+	border-style: solid;
+	border-color: black;
+}
+.blue_box{
+	margin: 10px;
+	height: 150px;
+  	width: 625px;
+	background: blue;
+	border-style: solid;
+	border-color: black;
+}
+.yellow_box{
+	margin: 10px;
+	height: 150px;
+	width: 190px;
+	background: yellow;
+	display: inline-block;
+	border-style: solid;
+	border-color: black;
+}
+.green_box{
+	margin: 10px;
+	height: 170px;
+	width: 630px;
+	background: green;
+	display: inline-block;
+	border-style: solid;
+	border-color: black;
+}
+.purple_box{
+	margin: 15px;
+	height: 130px;
+	width: 275px;
+	background: purple;
+	display: inline-block;
+	border-style: solid;
+	border-color: black;
+}
+.grey_box{
+	margin: -10px;
+	padding: 10px;
+	height: 730px;
+	width: 660px;
+	background: gray;
+	display: inline-block;
+	border-style: solid;
+	border-color: black;
 }
