@@ -4,26 +4,28 @@
  padding: 0px;
 }
 h1{
-    max-width: 950px;
+    min-width: 950px;
     height:50px;
     border-radius: 15px;
     padding-left: 10px;
     padding-top: 15px;
     padding-bottom: 5px;
-    margin-left: 10px;
     color: #9999FF;
     background-color: red;
+    margin-left: 10px;
     margin-bottom: 20px;
+    margin-right: 0px;
 }
 h2{
     color: #99FFFF;
 }
 .wall{
-    width: 970px;
+    min-width: 1200px;
     height:980px;
     background-color: #000066;
     padding-top: 10px;
     padding-right: 10px;
+    margin-right: 0px;
 }
 .left_center_box{
     line-height:20px;
@@ -42,12 +44,13 @@ h2{
 .right_center_box{
     position: absolute;
     line-height:20px;
-    width: 680px;
+    min-width: 900px;
     height: 760px;
     border-radius: 15px;
     color: #CCFFFF;
     background-color: black;
     margin-top: 10px;
+    margin-right: 10px;
     display:inline-block;
     padding-top: 30px;
     padding-left: 20px;
@@ -68,11 +71,12 @@ h2{
 }
 .bottom_box{
     line-height:20px;
-    width: 940px;
+    min-width: 940px;
     height: 40px;
     border-radius: 20px;
     margin-top: 540px;
     margin-left: 10px;
+    margin-right: 10px;
     padding-top: 20px;
     padding-left: 20px;
     color: #CCFFFF;
