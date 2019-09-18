@@ -2,3 +2,52 @@
  margin: 0px;
  padding: 0px;
 }
+#wall{
+    width: 805px;
+    height: 740px;
+    background-color: #C2C287
+}
+.github{
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    display:inline-block;
+}
+h1{
+    display:inline-block;
+}
+.catandninja{
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    display:inline-block;
+}
+#top_part{
+    padding-top: 30px;
+    padding-left: 155px;
+}
+.char_img_blue1{
+    width: 120px;
+    height: 120px;
+    outline: 3px solid black;
+    border: 10px solid #97CBFF;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+.char_img_blue{
+    width: 120px;
+    height: 120px;
+    outline: 3px solid black;
+    border: 10px solid #97CBFF;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.char_img_red{
+    padding: 10px;
+    width: 120px;
+    height: 120px;
+    outline: 3px solid black;
+    background-color: #FF5151;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
