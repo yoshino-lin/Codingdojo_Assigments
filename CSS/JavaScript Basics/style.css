@@ -20,7 +20,7 @@ h2{
 }
 .wall{
     width: 970px;
-    height:720px;
+    height:980px;
     background-color: #000066;
     padding-top: 10px;
     padding-right: 10px;
@@ -43,7 +43,7 @@ h2{
     position: absolute;
     line-height:20px;
     width: 680px;
-    height: 500px;
+    height: 760px;
     border-radius: 15px;
     color: #CCFFFF;
     background-color: black;
@@ -64,13 +64,14 @@ h2{
 }
 .key_word{
     color: #66FFFF;
+    margin-bottom: 30px;
 }
 .bottom_box{
     line-height:20px;
     width: 940px;
     height: 40px;
     border-radius: 20px;
-    margin-top: 280px;
+    margin-top: 540px;
     margin-left: 10px;
     padding-top: 20px;
     padding-left: 20px;
