@@ -15,9 +15,12 @@ h1{
     background-color: red;
     margin-bottom: 20px;
 }
+h2{
+    color: #99FFFF;
+}
 .wall{
     width: 970px;
-    height:970px;
+    height:720px;
     background-color: #000066;
     padding-top: 10px;
     padding-right: 10px;
@@ -37,19 +40,40 @@ h1{
     display:inline-block;
 }
 .right_center_box{
+    position: absolute;
     line-height:20px;
-    width: 715px;
+    width: 680px;
     height: 500px;
     border-radius: 15px;
-    color: #66FFFF;
+    color: #CCFFFF;
     background-color: black;
+    margin-top: 10px;
     display:inline-block;
-    margin-top: -240px;
-    margin-left: 200px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .home{
     margin-left: -20px;
 }
 .list2{
     margin-left: 20px;
+}
+.list_balck_box{
+    margin-left: 20px
+}
+.key_word{
+    color: #66FFFF;
+}
+.bottom_box{
+    line-height:20px;
+    width: 940px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 280px;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    color: #CCFFFF;
+    background-color: gray;
 }
