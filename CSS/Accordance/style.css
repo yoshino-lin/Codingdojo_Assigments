@@ -1,0 +1,235 @@
+*{
+	vertical-align: baseline;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+#header{
+	width: 1600px;
+	height: 100px;
+	margin-top: 90px;
+	margin-left: 130px;
+	margin-right: 130px;
+	border: 2px solid #ededed;
+	border-radius: 10px;
+	background: linear-gradient(#f9f9f9,#dadada);
+	padding-right: 50px;
+}
+#title_box{
+	height: 90px;
+	margin-top: -110px;
+	margin-left: 60px;
+}
+.title_txt{
+	padding: 40px;
+	font-weight:bold;
+	margin-left: 70px;
+	margin-right: -75px;
+	border-right: 1px solid #f1f1ef;
+	font-size: x-large;
+	display: inline-block;
+}
+#menu_icon1{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	height: 100px;
+	width: 130px;
+}
+#search_box{
+	height: 100px;
+	width: 200px;
+	margin-left: 1150px;
+	margin-top: -60px;
+}
+#search{
+	position: absolute;
+	margin-top: 1px;
+	height: 50px;
+	width: 300px;
+	border-radius: 30px;
+	border: 1px solid lightgray;
+}
+#menu_icon_search{
+	position: absolute;
+	margin-left: 250px;
+	height: 50px;
+	width: 54px;
+}
+#main_img{
+	width: 1654px;
+	margin-top: 20px;
+	margin-left: 130px;
+	margin-right: 130px;
+}
+#middle_choices_box{
+	margin-top: -10px;
+	margin-left: 130px;
+	margin-right: 130px;
+	width: 1654px;
+	height: 60px;
+	background: linear-gradient(gray,#525053,#3b3b3b);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: #89b6cf;
+	font-size: large;
+}
+.middle_choice_1{
+	color: white;
+	margin-top: 20px;
+	margin-left: 60px;
+	font-weight:bold;
+	display: inline-block;
+}
+.middle_choice{
+	margin-top: 15px;
+	margin-left: 35px;
+	font-weight:bold;
+	display: inline-block;
+}
+.xiexian{
+	margin-top: 15px;
+	margin-left: 35px;
+	color: gray;
+	display:inline-block;
+	font-size: x-large;
+}
+#discover_box{
+	width: 1650px;
+	height: 150px;
+	margin-top: 20px;
+	margin-left: 130px;
+	margin-right: 130px;
+	border: 3px solid #f0f0f0;
+
+}
+#discover_box_txt{
+	margin-left: 40px;
+	width: 930px;
+	margin-top: 20px;
+	padding-top: 20px;
+	height: 80px;
+	border-right: 3px solid #f0f0f0;
+	color: #cbcbcb;
+	display: inline-block;
+	font-size: 50px;
+}
+#store_button{
+	margin-top: 30px;
+	position: absolute;
+	margin-left: 80px;
+	width: 500px;
+	height: 80px;
+	background: linear-gradient(#5791bf,#41708f);
+	text-align: left;
+	padding-left: 50px;
+	border-radius: 10px;
+	color: white;
+	font-size: 30px;
+}
+#white_go{
+	margin-left: 120px;
+	display: inline-block;
+}
+#discribe_big{
+	margin-left: 130px;
+	margin-right: 130px;
+	width: 1650px;
+	height: 650px;
+	border: 3px solid #f0f0f0;
+	border-top: 0px;
+}
+.discrb_box{
+	margin-top: 50px;
+	padding-top: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-right: 3px solid #f0f0f0;
+	width: 380px;
+	height: 500px;
+	display:inline-block;
+	text-align: top;
+}
+.discrb_box_s{
+	margin-top: 50px;
+	padding-top: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 380px;
+	height: 500px;
+	display:inline-block;
+	text-align: top;
+}
+.content_icon{
+	height: 60px;
+	display: inline-block;
+}
+.title_discrib{
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 20px;
+	display: inline-block;
+	font-weight: bold;
+	font-size: xx-large;
+}
+.dis_text{
+	margin-top: 30px;
+}
+.big_img_vedio{
+	display: inline-block;
+	width: 380px;
+	height: 280px;
+}
+.watch_now_b{
+	width: 360px;
+	height: 60px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 10px;
+	background: linear-gradient(#60b2ef,#589fd5);
+	color: white;
+	font-size: x-large;
+	font-weight: bold;
+}
+#empty_box{
+	width: 1650px;
+	height: 150px;
+	margin-left: 130px;
+	margin-right: 130px;
+	border: 3px solid #f0f0f0;
+	border-top: 0px;
+}
+#bottom_big_link_box{
+	margin-top: 80px;
+	margin-left: 130px;
+	margin-right: 130px;
+	width: 1650px;
+	height: 500px;
+	border-bottom: 3px solid #f0f0f0;
+}
+.every_link_box{
+	display: inline-block;
+	width: 240px;
+	margin-right: 30px;
+}
+.link_kind{
+	border-bottom: 3px solid #f0f0f0;
+	font-weight: bold;
+	font-size: large;
+	padding: 20px;
+}
+.link_choice{
+	color: gray;
+	font-size: large;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#contact{
+	margin-top:30px;
+	margin-left: 130px;
+}
+.final_email{
+	color: #95a9b7;
+}
