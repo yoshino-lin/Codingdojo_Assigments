@@ -1,24 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#image1').click(function(){
-                $('#image1').hide();
-            });
-        });
-    </script>
 </head>
 <body>
 	<div class="box">
-	<p class="title">Click</p>
-	<button>Click</button>
-	<p class="description">Bind an event handler to the "click" JavaScript event, or trigger that event on an element.</p>
-	</div>
-	<div class="box">
-	<p class="title"></p>
-	<button></button>
-	<p class="description"></p>
-	</div>
+    	<p class="title">Click</p>
+    	<button id="click">Click</button>
+    	<p class="description">Bind an event handler to the "click" JavaScript event, or trigger that event on an element.</p>
+    </div>
+    <div class="box">
+        <p class="title">Hide</p>
+        <button id="hide">Hide</button>
+        <p class="description">Hide the matched elements.</p>
+    </div>
+    <div class="box">
+        <p class="title">Show</p>
+        <button id="show">Show</button>
+        <p class="description">Display the matched elements.</p>
+    </div>
+    <div class="box">
+        <p class="title">Toggle</p>
+        <button id="toggle">Toggle</button>
+        <p class="description">Display or hide the matched elements.</p>
+    </div>
+    <div class="box">
+        <p class="title">SlideDown</p>
+        <button id="slideDown">SlideDown</button>
+        <p class="description">Display the matched elements with a sliding motion.</p>
+    </div>
+    <div class="box">
+        <p class="title">SlideUp</p>
+        <button id="slideUp">SlideUp</button>
+        <p class="description">Hide the matched elements with a sliding motion.</p>
+    </div>
+    <div class="box">
+        <p class="title">SlideToggle</p>
+        <button id="slideToggle">SlideToggle</button>
+        <p class="description">Display or hide the matched elements with a sliding motion.</p>
+    </div>
+    <div class="box">
+        <p class="title">FadeIn</p>
+        <button id="fadeIn">FadeIn</button>
+        <p class="description">Display the matched elements by fading them to opaque.</p>
+    </div>
+    <div class="box">
+        <p class="title">FadeOut</p>
+        <button id="fadeOut">FadeOut</button>
+        <p class="description">Hide the matched elements by fading them to transparent.</p>
+    </div>
+    <div class="box">
+        <p class="title">AddClass</p>
+        <button id="addClass">AddClass</button>
+        <p class="description"> Adds the specified class(es) to each element in the set of matched elements.</p>
+    </div>
+    <div class="box">
+        <p class="title">Before</p>
+        <button id="before">Before</button>
+        <p class="description">Insert content, specified by the parameter, before each element in the set of matched elements.</p>
+    </div>
+    <div class="box">
+        <p class="title">After</p>
+        <button id="after">After</button>
+        <p class="description">Insert content, specified by the parameter, after each element in the set of matched elements.</p>
+    </div>
+    <div class="box">
+        <p class="title">Append</p>
+        <button id="append">Append</button>
+        <p class="description">Insert content, specified by the parameter, to the end of each element in the set of matched elements.</p>
+    </div>
+    <div class="box">
+        <p class="title">Html</p>
+        <button id="html">Html</button>
+        <p class="description">Get the HTML contents of the first element in the set of matched elements.</p>
+    </div>
+    <div class="box">
+        <p class="title">Attr</p>
+        <button id="attr"><font color="black">Attr</font></button>
+        <p class="description">Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.</p>
+    </div>
+    <div class="box">
+        <p class="title">Val</p>
+        <button id="val" value="1">Val</button>
+        <p class="description">Get the current value of the first element in the set of matched elements or set the value of every matched element.</p>
+    </div>
+    <div class="box">
+        <p class="title">Text</p>
+        <button id="text">Text</button>
+        <p class="description">Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.</p>
+    </div>
+    <script>
+        $("#click").click(function() {
+            alert("you get a alert after click.");
+        });
+        $("#hide").click(function() {
+            $("#hide").hide();
+        });
+        $("#show").click(function() {
+            $("#hide").show();
+        });
+        $("#toggle").click(function() {
+            $("p").toggle();
+        });
+        $("#slideDown").click(function() {
+            $("#slideDown").hide(function(){
+                $("#slideDown").slideDown();
+            });
+        });
+        $("#slideUp").click(function() {
+            $("#slideUp").slideUp();
+        });
+        $("#slideToggle").click(function() {
+            $("p").slideToggle();
+        });
+        $("#fadeIn").click(function() {
+            $("#fadeIn").hide(function(){
+                $("#fadeIn").fadeIn();
+            });
+        });
+        $("#fadeOut").click(function() {
+            $("#fadeOut").fadeOut();
+        });
+        $("#addClass").click(function() {
+            $("#addClass").addClass("green_bg");
+        });
+        $("#before").click(function() {
+            $("#before").before("<p>This is used for testing 'before'</p>");
+        });
+        $("#after").click(function() {
+            $("#after").after("<p>This is used for testing 'after'</p>");
+        });
+        $("#append").click(function() {
+            $("#append").append("<p>This is used for testing 'append'</p>");
+        });
+        $("#html").click(function() {
+            $("#html").html("Now the text of button is changed");
+        });
+        $("#attr").click(function() {
+            var color = "The color of this button is " + $("font").attr("color") ;
+            $("#attr").html(color);
+        });
+        $("#val").click(function() {
+            var number = "The value of the button is " + $("#val").val() ;
+            $("#val").html(number);
+        });
+        $("#text").click(function() {
+            $("#text").text("Now the text of button is changed");
+        });
+    </script>
 </body>
